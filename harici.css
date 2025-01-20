@@ -1,0 +1,127 @@
+
+/*Consider margin and padding when calculating the box model dimensions.*/
+* { 
+box-sizing: border-box;
+padding: 0px;
+margin:0px ;
+}
+    /* col- width*/
+    .col-1 { width: 8.33%;}
+    .col-2 { width: 16.66%;}
+    .col-3 { width: 8.33%;}
+    .col-4 { width: 25%;}
+    .col-5 { width: 33.33%;}
+    .col-6 { width:41.66%;}
+    .col-7 { width: 58.33%;}
+    .col-8 { width: 66.66%;}
+    .col-9 { width: 75%;}
+    .col-10 { width: 83.33%;}
+    .col-11 { width: 91.66%;}  
+    .col-12 { width: 100%;}
+/* choose all col- html tags*/
+    [class*="col-"]{
+        float: left;
+        padding: 15px;
+        border: 1px solid;
+    }
+    /*no-wrap (satırlar yanyana gelmesin)*/
+    .row::after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+   /*Responsive image*/
+    img {
+        width:100%;
+        height: auto;
+    }
+    /*rows*/
+    .row{
+        
+        background-color: cornflowerblue;
+        margin: 10px;
+        padding: 10px;
+       
+     
+    }
+    /*On screens with a maximum-width of 500px, set the box to have a width of 100%.*/
+    @media screen and (max-width:500px){
+          [ class*= "col-"] {width:100%;}     
+    } 
+    /*col-float KUTU*/
+    [class*="col-"] {
+        float: left;
+        padding: 10px;
+        background-color: antiquewhite;
+        margin: 5px;
+   
+       
+
+    }
+    /*Height col-*/
+    #ust {height: 50px;}
+    #menu {min-height: 50px;}
+    #orta {min-height:400px;}
+    #alt {min-height: 50px;}
+    
+
+    /*sosyal medya ikonları*/
+    #ikon {
+        width: 50px;
+        float: right;
+        margin-right: 10px;
+    }
+    /*Mainmenu*/
+    #menu #anamenu ul {
+        list-style-type: none;
+        
+
+    }
+    #menu #anamenu ul li {
+        border: 1px solid blue;
+        width: 25%;
+        float: left;
+        background-color: cornflowerblue;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 2px 2px 4px darkblue
+        
+    }
+   /*500 px den daha küçük ekranlar için respansive */
+    @media screen and (max-width:500px){
+       #menu #anamenu ul li {width:100%;}     
+   }
+   /*anamenu linkleri*/
+   #menu #anamenu a {
+    color:rgb(77, 59, 37);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    text-decoration: none;
+   }
+   #menu #anamenu a:hover
+   {
+    color: blue;
+    text-decoration: underline;
+
+
+   }
+   #menu #anamenu a:active, a:visited
+   {
+    color: violet;
+   }
+   /*altmenu*/
+    
+   #alt #altmenu 
+   p {  text-align: center;
+    }
+    
+    /*icerik*/
+    #icerik
+ { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+font-size: medium;
+font-weight:lighter;
+font-style: italic; }
+ 
+  
